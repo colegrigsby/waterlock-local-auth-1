@@ -1,5 +1,7 @@
 # Waterlock Local Auth
 
+Overplay Fork to fix various issues. First is the email code pulling settings directly from the `config/waterlock.js` file which bypasses anything we try to hide in `config/locals.js` such as CREDENTIALS (duh). 
+
 [![Build Status](http://img.shields.io/travis/waterlock/waterlock-local-auth.svg?style=flat)](https://travis-ci.org/waterlock/waterlock-local-auth) [![NPM version](http://img.shields.io/npm/v/waterlock-local-auth.svg?style=flat)](http://badge.fury.io/js/waterlock-local-auth) [![Dependency Status](http://img.shields.io/gemnasium/davidrivera/waterlock-local-auth.svg?style=flat)](https://gemnasium.com/davidrivera/waterlock-local-auth)
 
 waterlock-local-auth is a module for [waterlock](http://waterlock.ninja/)
