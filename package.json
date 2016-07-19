@@ -1,52 +1,112 @@
 {
-  "name": "waterlock-local-auth",
-  "version": "v0.1.2-rc1",
+  "_args": [
+    [
+      {
+        "hosted": {
+          "directUrl": "https://raw.githubusercontent.com/overplay/waterlock-local-auth/master/package.json",
+          "gitUrl": "git://github.com/overplay/waterlock-local-auth.git",
+          "httpsUrl": "git+https://github.com/overplay/waterlock-local-auth.git",
+          "shortcut": "github:overplay/waterlock-local-auth",
+          "ssh": "git@github.com:overplay/waterlock-local-auth.git",
+          "sshUrl": "git+ssh://git@github.com/overplay/waterlock-local-auth.git",
+          "type": "github"
+        },
+        "name": null,
+        "raw": "github:overplay/waterlock-local-auth",
+        "rawSpec": "github:overplay/waterlock-local-auth",
+        "scope": null,
+        "spec": "github:overplay/waterlock-local-auth",
+        "type": "hosted"
+      },
+      "/Users/cole/Development/sails/asahi"
+    ]
+  ],
+  "_from": "overplay/waterlock-local-auth",
+  "_id": "waterlock-local-auth@0.1.2-rc1",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/waterlock-local-auth",
+  "_phantomChildren": {},
+  "_requested": {
+    "hosted": {
+      "directUrl": "https://raw.githubusercontent.com/overplay/waterlock-local-auth/master/package.json",
+      "gitUrl": "git://github.com/overplay/waterlock-local-auth.git",
+      "httpsUrl": "git+https://github.com/overplay/waterlock-local-auth.git",
+      "shortcut": "github:overplay/waterlock-local-auth",
+      "ssh": "git@github.com:overplay/waterlock-local-auth.git",
+      "sshUrl": "git+ssh://git@github.com/overplay/waterlock-local-auth.git",
+      "type": "github"
+    },
+    "name": null,
+    "raw": "github:overplay/waterlock-local-auth",
+    "rawSpec": "github:overplay/waterlock-local-auth",
+    "scope": null,
+    "spec": "github:overplay/waterlock-local-auth",
+    "type": "hosted"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "git://github.com/overplay/waterlock-local-auth.git#dcb609705023ea9de2fd7bd6c6ea1bfb711e0f47",
+  "_shasum": "08a3158a666fdf76b2853bae911c94da58a9e27d",
+  "_shrinkwrap": null,
+  "_spec": "github:overplay/waterlock-local-auth",
+  "_where": "/Users/cole/Development/sails/asahi",
+  "author": {
+    "email": "david.r.rivera193@gmail.com",
+    "name": "David Rivera"
+  },
+  "bugs": {
+    "url": "https://github.com/davidrivera/waterlock-local-auth/issues"
+  },
+  "contributors": [
+    {
+      "email": "david.r.rivera193@gmail.com",
+      "name": "David Rivera"
+    }
+  ],
+  "dependencies": {
+    "bcrypt": "~0.8.5",
+    "jade": "~1.11.0",
+    "jwt-simple": "~0.3.0",
+    "lodash": "~3.10.0",
+    "moment": "~2.10.6",
+    "node-uuid": "~1.4.2",
+    "nodemailer": "1.4.0"
+  },
   "description": "local authentication for waterlock",
-  "main": "index.js",
-  "scripts": {
-    "test": "make test"
+  "devDependencies": {
+    "coveralls": "*",
+    "istanbul": "*",
+    "jshint": "*",
+    "mocha": "*",
+    "proxyquire": "*",
+    "should": "*"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/davidrivera/waterlock-local-auth"
+  "engines": {
+    "node": ">=0.10"
   },
+  "gitHead": "dcb609705023ea9de2fd7bd6c6ea1bfb711e0f47",
+  "homepage": "https://github.com/davidrivera/waterlock-local-auth",
   "keywords": [
     "waterlock",
     "local",
     "authentication",
     "sails"
   ],
-  "devDependencies":{
-    "mocha": "*",
-    "should": "*",
-    "proxyquire": "*",
-    "coveralls": "*",
-    "istanbul": "*",
-    "jshint": "*"
-  },
-  "dependencies":{
-    "bcrypt": "~0.8.5",
-    "lodash": "~3.10.0",
-    "moment": "~2.10.6",
-    "nodemailer": "1.4.0",
-    "jade": "~1.11.0",
-    "jwt-simple": "~0.3.0",
-    "node-uuid": "~1.4.2"
-  },
-  "author": "David Rivera <david.r.rivera193@gmail.com>",
-  "contributors": [
-    {
-      "name": "David Rivera",
-      "email": "david.r.rivera193@gmail.com"
-    }
-  ],
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/davidrivera/waterlock-local-auth/issues"
-  },
-  "homepage": "https://github.com/davidrivera/waterlock-local-auth",
+  "main": "index.js",
+  "name": "waterlock-local-auth",
+  "optionalDependencies": {},
   "preferGlobal": false,
-  "engines": {
-    "node": ">=0.10"
-  }
+  "readme": "# Waterlock Local Auth\n\nOverplay Fork to fix various issues. First is the email code pulling settings directly from the `config/waterlock.js` file which bypasses anything we try to hide in `config/locals.js` such as CREDENTIALS (duh). \n\n[![Build Status](http://img.shields.io/travis/waterlock/waterlock-local-auth.svg?style=flat)](https://travis-ci.org/waterlock/waterlock-local-auth) [![NPM version](http://img.shields.io/npm/v/waterlock-local-auth.svg?style=flat)](http://badge.fury.io/js/waterlock-local-auth) [![Dependency Status](http://img.shields.io/gemnasium/davidrivera/waterlock-local-auth.svg?style=flat)](https://gemnasium.com/davidrivera/waterlock-local-auth)\n\nwaterlock-local-auth is a module for [waterlock](http://waterlock.ninja/)\nproviding a local authentication method for users either based on username or email.\n\n## Usage\n\n```bash\nnpm install waterlock-local-auth\n```\n\nset the following option in your `waterlock.js` config file\n\n```js\nauthMethod:[\n\t{\n\t\tname: \"waterlock-local-auth\",\n\t\tpasswordReset: {\n\t\t\ttokens: boolean, // object containing information regarding password resets\n\n\t\t\t// object containing information about your smtp server, see nodemailer\n\t\t\tmail: {\n\t\t\t\toptions: string, // how it is use te transport method, see nodemailer\n\t\t\t\tfrom: string, // the from address\n\t\t\t\tsubject: string, // the email subject for password reset emails\n\t\t\t\tforwardUrl: string // the url to send the user to after they have clicked the password reset link in their inbox (e.g. a form on your site which POST to `/auth/reset`)\n\t\t\t},\n\n\t\t\t// object containing template information for the reset emails\n\t\t\ttemplate:{\n\t\t\t\tfile: string, // the relative path to the `jade` template for the reset emails\n\t\t\t\tvars: object, // object containing any vars you want passed to the template for rendering\n\t\t\t}\n\t\t},\n\t\tcreateOnNotFound: boolean // should local auth try to create the user on a failed login attempt, good if you do not want to implement a registration form.\n\t}\n]\n```\n\n## Auth Model\nLocal auth adds the following attributes onto the Auth model\n\n```js\n  email: {\n    type: 'email',\n    unique: true\n  },\n  password: {\n    type: 'STRING',\n    minLength: 8\n  },\n  resetToken: {\n    model: 'resetToken'\n  }\n```\nwith the way waterlock is designed and this model you can override any of these attributes, also if you want to use a username instead of an email address you can drop in the `username` attribute which is a signification key causing local auth to use that to authenticate.\n\n## Password reset\nWaterlock uses [nodemailer](http://www.nodemailer.com/) to send password reset emails. The options in the config file are applied to nodemailer as such\n```js\nvar mail = config.passwordReset.mail;\nnodemailer.createTransport(mail.protocol, mail.options);\n```\n\nif you choose to go with this option then a user upon visiting the url `/auth/reset` with a post param of `email` will receieve an email at that address with the reset url. This url upon clicked with be validated against the server to ensure it's still within the time window allotted for a password reset. If so will set the `resetToken` session variable. After this if you have set a `forwardUrl` in your `waterlock.js` config file the user will be forwarded to this page.\n\nIf you want to take advantage of the built in reset itself have the page you sent your user to above `POST` to `/auth/reset` with the post param of `password` If all is well a password reset will be issued.\n\n## Template\nYou can customize the email template used in the password reset via the template file defined in `config/waterlock.js` this template file is rendered with the fun and dynamic `jade` markup, the view var `url` is generated and passed to it when a user requests and password reset. You can customize this template to your liking and pass any other view vars you wish to it via the `vars` options in the js file.\n\nYour user can simply try to login to `/login` if the user is not found one will be created using [waterlines](https://github.com/balderdashy/waterline) `findOrCreate` method\n",
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davidrivera/waterlock-local-auth.git"
+  },
+  "scripts": {
+    "test": "make test"
+  },
+  "version": "0.1.2-rc1"
 }
