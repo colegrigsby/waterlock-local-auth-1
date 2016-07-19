@@ -77,5 +77,4 @@ Your user can simply try to login to `/login` if the user is not found one will 
 
 
 ## Validate User
-Create a ValidateToken and attach it to an auth. The creation of a token will send an email to the user. 
-The link created does an HTTP `GET` to `/auth/validate` will invoke the validation process by checking the given token, and then log the user in.  
+An HTTP `GET` to `/auth/validate` will invoke the validation process and send the user an email to validate from. 
