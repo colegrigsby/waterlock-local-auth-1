@@ -16,4 +16,6 @@
 - reset password token is one time use 
     - removes reset token from user and sends the token in the url 
     - prevents the user from using the same link again to reset their password 
+- validate token logs user in automatically
+    - had to invert auth for waterlock login! 
     
